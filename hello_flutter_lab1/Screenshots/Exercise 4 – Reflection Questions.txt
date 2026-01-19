@@ -1,0 +1,103 @@
+Câu 1: What is the purpose of the flutter doctor command?
+
+flutter doctor kiểm tra và báo cáo tình trạng môi trường phát triển Flutter:
+- Kiểm tra Flutter SDK đã cài đặt đúng chưa
+- Xác minh các dependencies (Android SDK, Xcode, IDE)
+- Phát hiện vấn đề và đưa ra hướng dẫn khắc phục
+- Kiểm tra thiết bị kết nối
+
+
+Câu 2: What file acts as the entry point of a Flutter application?
+
+File lib/main.dart là entry point của Flutter app
+
+void main() => runApp(const MyApp());
+
+( main() được gọi đầu tiên khi app khởi động
+  runApp() inflate widget tree và hiển thị UI )
+
+
+Câu 3: Explain the difference between Hot Reload and Hot Restart
+
+               Hot Reload (r)             Hot Restart (R) 
+                         
+- Tốc độ:      Rất nhanh (~1s)            Chậm hơn (3-5s)
+- State:       Giữ nguyen		  Reset về ban đầu
+- Dùng khi:    Thay đổi UI/widgets        Thay đổi main(),logic
+
+
+Câu 4: How does runApp() build the widget tree?
+
+runApp() xây dựng widget tree qua các bước:
+
+1. Nhận root widget
+runApp(MyApp())  // MyApp - root widget
+
+2. Attach widget vào màn hình
+Gắn root widget vào RenderView
+
+3. Gọi build() recursively
+MyApp.build()
+  -> MaterialApp.build()
+    -> Scaffold.build()
+      -> AppBar.build(), Body.build()
+
+4. Tạo widget tree
+MyApp
+     MaterialApp
+         Scaffold
+             AppBar
+             Body
+
+5. Render lên màn hình
+Widget tree → Element tree → Render tree → Paint
+
+
+Câu 5: Describe how Flutter's architecture enables cross-platform development
+
+Flutter cho phép phát triển cross-platform nhờ:
+
+1. Một codebase duy nhất
+- Viết Dart một lần → chạy trên iOS, Android, Web, Desktop
+
+2. Skia Rendering Engine
+- Flutter tự vẽ UI, không dùng native widgets
+- Đảm bảo giao diện giống hệt nhau trên mọi platform
+
+3. Kiến trúc phân lớp
+
+|     Dart App     |   <- Code
+
+| Framework (Dart) |   <- Widgets
+
+|   Engine (C++)   |   <- Skia, Dart Runtime
+
+|     Platform     |   <- iOS/Android/Web
+
+4. Platform Channels
+- Truy cập native features (camera, GPS, sensors)
+- Giao tiếp giữa Dart và native code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
