@@ -1,4 +1,3 @@
-// lib/exercise3/widgets/movie_list_item.dart
 import 'package:flutter/material.dart';
 import '../models/movie_item.dart';
 

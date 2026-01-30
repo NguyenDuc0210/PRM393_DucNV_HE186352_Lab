@@ -1,4 +1,3 @@
-// lib/exercise5/screens/common_ui_fixes_screen.dart
 import 'package:flutter/material.dart';
 import '../widgets/expanded_fix.dart';
 import '../widgets/overflow_fix.dart';

@@ -1,7 +1,4 @@
-// lib/main.dart
 import 'package:flutter/material.dart';
-
-// Import màn hình chính của từng bài tập
 import 'exercise1/screens/core_widgets_screen.dart';
 import 'exercise2/screens/input_controls_screen.dart';
 import 'exercise3/screens/layout_demo_screen.dart';
@@ -29,11 +26,9 @@ class Lab4App extends StatelessWidget {
   }
 }
 
-// Widget cho màn hình menu
 class ExerciseMenu extends StatelessWidget {
   const ExerciseMenu({super.key});
 
-  // Hàm trợ giúp để tạo một nút menu
   Widget _buildMenuButton(BuildContext context, String title, Widget screen) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),

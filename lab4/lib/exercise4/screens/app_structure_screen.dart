@@ -1,4 +1,3 @@
-// lib/exercise4/screens/app_structure_screen.dart
 import 'package:flutter/material.dart';
 
 class AppStructureScreen extends StatefulWidget {
@@ -19,7 +18,6 @@ class _AppStructureScreenState extends State<AppStructureScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Để áp dụng theme riêng, chúng ta bọc màn hình trong một MaterialApp mới.
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(useMaterial3: true).copyWith(
@@ -32,7 +30,6 @@ class _AppStructureScreenState extends State<AppStructureScreen> {
       home: Scaffold(
         appBar: AppBar(
           leading: BackButton(
-            // rootNavigator: true để đảm bảo nó thoát khỏi MaterialApp con này
             onPressed: () => Navigator.of(context, rootNavigator: true).pop(),
           ),
           title: const Text('Exercise 4 - App Structure'),
@@ -50,7 +47,6 @@ class _AppStructureScreenState extends State<AppStructureScreen> {
             style: TextStyle(fontSize: 16),
           ),
         ),
-        // Đã xóa floatingActionButton
       ),
     );
   }

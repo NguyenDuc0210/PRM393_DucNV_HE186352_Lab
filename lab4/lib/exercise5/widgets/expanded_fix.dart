@@ -1,4 +1,3 @@
-// lib/exercise5/widgets/expanded_fix.dart
 import 'package:flutter/material.dart';
 
 class ExpandedFix extends StatelessWidget {

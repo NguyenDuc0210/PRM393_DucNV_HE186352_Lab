@@ -1,4 +1,3 @@
-// lib/exercise2/screens/input_controls_screen.dart
 import 'package:flutter/material.dart';
 
 enum MovieGenre { action, comedy, drama }
@@ -86,7 +85,6 @@ class _InputControlsScreenState extends State<InputControlsScreen> {
           ),
           const SizedBox(height: 8),
 
-          // Hiển thị "Selected genre" ngay sau các radio buttons
           Padding(
             padding: const EdgeInsets.only(left: 16.0),
             child: Text(
@@ -96,7 +94,6 @@ class _InputControlsScreenState extends State<InputControlsScreen> {
           ),
           const SizedBox(height: 24),
 
-          // Button "Open Date Picker" với style giống ảnh
           ElevatedButton(
             onPressed: () => _selectDate(context),
             style: ElevatedButton.styleFrom(
@@ -112,7 +109,6 @@ class _InputControlsScreenState extends State<InputControlsScreen> {
           ),
           const SizedBox(height: 12),
 
-          // Hiển thị ngày đã chọn (nếu có)
           if (_selectedDate != null)
             Center(
               child: Text(

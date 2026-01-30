@@ -1,4 +1,3 @@
-// lib/exercise5/widgets/context_fix.dart
 import 'package:flutter/material.dart';
 
 class ContextFix extends StatelessWidget {
@@ -30,7 +29,6 @@ class ContextFix extends StatelessWidget {
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              // Context được truyền vào đây là hợp lệ vì nó là con của Scaffold
               _showPicker(context);
             },
             child: const Text('Show Date Picker (Correct Context)'),

@@ -1,4 +1,3 @@
-// lib/exercise5/widgets/overflow_fix.dart
 import 'package:flutter/material.dart';
 
 class OverflowFix extends StatelessWidget {

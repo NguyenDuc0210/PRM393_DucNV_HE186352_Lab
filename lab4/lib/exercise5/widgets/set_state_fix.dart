@@ -1,4 +1,3 @@
-// lib/exercise5/widgets/set_state_fix.dart
 import 'package:flutter/material.dart';
 
 class SetStateFix extends StatefulWidget {
