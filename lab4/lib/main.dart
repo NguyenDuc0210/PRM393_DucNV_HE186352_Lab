@@ -26,6 +26,7 @@ class Lab4App extends StatelessWidget {
   }
 }
 
+
 class ExerciseMenu extends StatelessWidget {
   const ExerciseMenu({super.key});
 
